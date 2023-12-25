@@ -26,6 +26,12 @@ I've implemented the hardware both as a low side N MOSFET buck converter (this c
 
 
 */
+#if !defined(__AVR_ATmega328P__) && !defined(__AVR_ATmega328__) && ! defined(__AVR_ATmega168__)
+
+#error This code only works on the ATMega328P or similar
+
+#endif
+
 
 #include "Arduino.h"
 #include <avr/sleep.h>
